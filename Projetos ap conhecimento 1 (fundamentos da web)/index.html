@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Have Everything for Your Dog</title>
+        <link rel="stylesheet" href="globals.css" />
+
+        <script>
+            //exibir saudação
+            function mostrarSaudacao(){
+                var nomeCompleto = "Kayque Almeida Santos";
+                var cidadeCurso = "São Paulo/Mackenzie - ADS";
+                var agora = new Date();
+                var hora = agora.getHours();
+                var diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sabado"];
+                var diaAtual = diasSemana[agora.getDay()];
+
+                var saudacao;
+                if (hora < 12) {
+                    saudacao = "Bom dia";
+                } else if (hora < 18) {
+                    saudacao = "Boa tarde!";
+                } else {
+                    saudacao = "Boa noite!";    
+                }  
+                
+                var mensagem = nomeCompleto + "\n" +
+                               cidadeCurso + "\n" +
+                               saudacao + "Hoje é" + diaAtual + ".";
+
+                alert(mensagem);
+            }
+        </script>
+    </head>
+    <body onload="mostrarSaudacao()">
+        <div class="navbar show-menu">
+            <div class="header-inner-content">
+                <h1 class="logo">Everything<span>YouDog</span></h1>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Produtos</li>
+                        <li>Sobre</li>
+                        <li><a href="criar_conta.html">Criar Conta</a></li>
+                        <li><a href="contato.html">Contatos</a></li>
+                        <ul>
+                            <a href="https://www.instagram.com/belmendee?igsh=ZGthZWlxN3dlZTVy"> <img src="instagram.png" width="25px"></a>
+                            <a href="https://wa.me/5511941989182"> <img src="whatsapp.png" width="25px"></a>
+                            <a href="https://linkedin.com"> <img src="linkedin.png" width="25px"></a>
+                        </ul>
+                    </ul>
+                </nav>
+                <div class="nav-icon-container">
+                    <img src="main-menu.png" class="menu-button" />
+                </div>
+            </div>
+        </div>
+     
+        <header>
+            <div class="header-inner-content">
+                <div class="header-bottom-side">
+                    <div class="header-bottom-side-left">  
+                        <h2>De um novo estilo ao seu melhor amigo!</h2>
+                        <p>
+                            Seu melhor amigo sempre merecerá o melhor, o amor que você 
+                            oferece para ele, ele retribuirá com muito mais.
+                        </p>
+                        <button>Ver Agora &#8594;</button>
+                        <!-- O vídeo foi mantido aqui -->
+             <video width="400" height="200" controls>
+                 <source src="venha para everyting youdog.mp4" type="video/mp4">
+             </video>
+                    </div>
+                    <div class="header-bottom-side-right">
+                        <img src="imagem-cao-1.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="gray-background">
+                <div class="page-inner-content">
+                    <div class="cols cols-3">
+                        <img src="grupo_de_cachorros.png" alt="" style="width: 400px;" />
+                        <img src="brinquedo_cachorro.png" alt="" style="width: 300px;"/>
+                        <img src="cachorro_1.png" alt="" style="width: 250px;"/>
+                    </div>    
+                </div>
+            </div>
+        </main>
+
+        <script>
+            const navbar = document.querySelector(".navbar");   
+            const menuButton = document.querySelector(".menu-button");
+
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+        </script>
+
+        <script>
+            document.write("<h4><br>Nome: Kayque Almeida Santos<br>");
+            document.write("Ano: 2024");
+            document.write("<br>Twitter: @kayque.mackenzista<br>");
+            document.write("Facebook: @kayque.mackenzista");
+            document.write("<br>LinkedIn: @kayque.mackenzista<br>");
+            document.write("Sexo: Masculino");
+            document.write("<br>Localização - polo: Higienópolis<br>");
+        </script>
+
+        <footer>
+            <div class="footer-copyright">
+                <p>© 2024 Copyright - Kayque Almeida Santos</p>
+            </div>
+        </footer>
+    </body>
+</html>
